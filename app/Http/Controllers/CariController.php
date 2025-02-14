@@ -55,10 +55,6 @@ class CariController extends Controller
     {
         $nama = trim($request->query('nama', 'Turner Mia'));
 
-        if (empty($nama)) {
-            return response()->json(['RC' => 400, 'RCM' => 'Nama tidak boleh kosong'], 400);
-        }
-
         $data = $this->fetchData();
 
         $filteredData = array_filter($data, function ($item) use ($nama) {
@@ -76,10 +72,6 @@ class CariController extends Controller
     {
         $nim = trim($request->query('nim', '9352078461'));
 
-        if (empty($nim)) {
-            return response()->json(['RC' => 400, 'RCM' => 'NIM tidak boleh kosong'], 400);
-        }
-
         $data = $this->fetchData();
 
         $filteredData = array_filter($data, function ($item) use ($nim) {
@@ -96,10 +88,6 @@ class CariController extends Controller
     public function cariYmd(Request $request)
     {
         $ymd = trim($request->query('ymd', '20230405'));
-
-        if (empty($ymd)) {
-            return response()->json(['RC' => 400, 'RCM' => 'Tanggal tidak boleh kosong'], 400);
-        }
 
         $data = $this->fetchData();
 

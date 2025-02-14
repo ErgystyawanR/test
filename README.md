@@ -58,7 +58,7 @@ Edit file `.env` dan sesuaikan konfigurasi database:
 
 ## 4. Impor Database
 
-Jika terdapat file database dalam format `Database_ekspor.sql`, impor ke MySQL:
+Jika terdapat file dalam format `Database_ekspor`, impor ke MySQL:
 
 Gunakan **phpMyAdmin** untuk impor secara manual.
 
